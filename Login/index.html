@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
+    <script src="../assets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="icon" href="./img/C7FFF447-91D0-466A-9F2A-B89961C31A18-removebg-preview.png" type="image/png" sizes="16x16">
+    <title>Laman Login</title>
+</head>
+<body>
+    <div class="global-container">
+        <div class="card login-form">
+            <div class="card-body">
+                <center><img src="./img/iconuser.svg" alt="" class="head-icon"></center>
+                <h1 class="card-title text-center">L O G I N</h1>
+            </div>
+            <div class="card-text">
+                <form action="" method="post" id="submit">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email or Username</label>
+                        <input type="text" class="form-control" placeholder="Name or User@email.com" id="input_text" aria-describedby="emailHelp">
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" placeholder="Password" id="input_pass">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+                    </div>
+                    <a href="#" class="text-decoration-none">Forgot Password ?</a>
+                    <div class="input_wrap d-grid gap-2">
+                        <span class="eror_msg">Masukkan Username dan Password terlebih dahulu</span>
+                        <button type="submit" class="btn btn-primary" onclick="auth()">Sign In</button>
+                        <button type="submit" class="btn-google btn-primary">
+                            <img src="./img/google.png" alt="">
+                            Sign In With Google
+                        </button>
+                        <span class="d-inline">Don't have an account?
+                            <a href="#" class="d-inline text-decoration-none">Sign Up for free</a>
+                        </span>
+                    </div>               
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function auth(){
+            var input_text = document.querySelector('#input_text');
+            var input_password = document.querySelector('#input_pass');
+            var eror_msg = document.querySelector('.eror_msg');
+
+            $('#submit').submit(function (e){
+                e.preventDefault();
+
+                if(input_text.value.length < 1 || input_password.value.length < 1){
+                    eror_msg.style.display = "inline-block";
+                    input_text.style.border = "1px solid #8F00FF"
+                    input_password.style.border = "1px solid #8F00FF"
+                    return false;
+                }
+
+                eror_msg.style.display = "none";
+
+                var email = document.getElementById("input_text").value;
+                var pass = document.getElementById("input_pass").value;
+
+                if(email == "admin@gmail.com" || email == "admin" && pass == "admin123"){
+                    alert("Anda Berhasil Login !");
+                    window.location.assign("../Dashboard/index.html");
+                }else{
+                    alert("Username dan Password anda salah !");
+                }
+            });
+        }
+    </script>
+</body>
+</html>

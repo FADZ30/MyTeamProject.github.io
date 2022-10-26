@@ -1,0 +1,21 @@
+.p1 {
+    border: solid rgb(80, 38, 67);
+    padding-left: 3%;
+}
+.container-bio {
+    height: 400vh;
+    width: 100%;
+    background-image: url('./img/Latar.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-right: 3%;
+    padding-left: 5%;
+    box-sizing: border-box;
+    position: relative;
+}
+.wrap-bio {
+    width: 800px;
+    color:black;
+    margin: 20px auto;
+    padding:15px;
+}

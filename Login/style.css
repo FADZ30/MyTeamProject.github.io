@@ -1,0 +1,83 @@
+html, body{
+    height: 100%;
+    background-image: url("./img/wallpaperflare.com_wallpaper.jpg");
+}
+
+.global-container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.login-form{
+    width: 380px;
+    height: 660px;
+    padding: 20px;
+    background-color: blueviolet !important;
+}
+
+.login-form a{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: black;
+}
+
+.login-form span{
+    margin-top: 10px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: black;
+}
+
+.login-form span a{
+    font-weight: 580;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="checkbox"]{
+    border: 2px solid #8F00FF;
+    margin-bottom: 25px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus{
+    outline: none;
+    border: none;
+    margin: 0;
+}
+
+.card-title{
+    font-weight: 900;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn{
+    background: violet !important;
+    color: black;
+    transform: translateY(10px);
+    font-size: 14px;
+    border-radius: 10px !important;
+}
+
+.btn-google{
+    font-size: 14px;
+    height: 38px;
+    border-radius: 10px !important;
+    transform: translateY(10px);
+}
+
+.login-form .input_wrap .eror_msg{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: #f74040;
+    display: none;
+}
